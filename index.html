@@ -3,661 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Знает Приложения — Безопасные и надёжные приложения для Android</title>
-    <meta name="description" content="Знает Приложения — безопасные мобильные приложения без рекламы: Заметка, Ключ, Штрих Взор, Сёрфер Браузер. Скачивайте в Киоске, Google Play, RuStore, AppGallery">
-    <meta name="keywords" content="Знает Приложения, безопасные приложения, приложения без рекламы, Заметка, Ключ, менеджер паролей, 2FA, Штрих Взор, QR сканер, Сёрфер Браузер, ЯБЛОГЕР, Вспышка Игр, Киоск">
-    <meta name="author" content="Знает Приложения">
+    <title>Знает Приложения — Безопасные и надёжные приложения для вашего смартфона</title>
+    <meta name="description" content="Проект «Знает Приложения» — безопасные, надёжные и бесплатные приложения для Android. Заметки, менеджер паролей, QR-сканер, браузер и игровая платформа без рекламы и сбора данных.">
+    <meta name="keywords" content="Знает Приложения, безопасные приложения, Android приложения, заметки, менеджер паролей, QR сканер, браузер, игровая платформа, без рекламы, приватность">
+    <meta name="author" content="ИП Капульцевич Максим Игоревич">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Знает Приложения — Безопасные и надёжные приложения">
-    <meta property="og:description" content="Приложения и сервисы, которые ценят вашу безопасность и приватность. Без рекламы, без лишнего сбора данных.">
+    <meta property="og:title" content="Знает Приложения — Безопасность и надёжность в каждом приложении">
+    <meta property="og:description" content="Скачивайте безопасные приложения без рекламы. Заметки, пароли, QR-коды, браузер и игры — всё бесплатно и без сбора данных.">
     <meta property="og:url" content="https://znaetapps.ru">
     <meta property="og:site_name" content="Знает Приложения">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Знает Приложения — Безопасные приложения для Android">
-    <meta name="twitter:description" content="Безопасные мобильные приложения без рекламы и лишнего сбора данных">
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://znaetapps.ru">
-    
-    <!-- Favicon (placeholder) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
-    
-    <!-- Styles -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-color: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary-color: #10b981;
-            --dark-bg: #1e293b;
-            --light-bg: #f8fafc;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --white: #ffffff;
-            --gradient-blue: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-green: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: var(--gradient-blue);
-            color: var(--white);
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
-        }
-        
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-        
-        .hero-feature {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.6s backwards;
-        }
-        
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-        
-        /* Advantages Section */
-        .advantages {
-            background: var(--light-bg);
-        }
-        
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .advantage-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .advantage-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .advantage-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .advantage-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .advantage-subtitle {
-            text-align: center;
-            font-size: 1.8rem;
-            margin: 3rem 0 2rem;
-            color: var(--text-dark);
-        }
-        
-        /* Download Section */
-        .download {
-            background: var(--dark-bg);
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .download .section-title {
-            color: var(--white);
-        }
-        
-        .stores {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .store-badge {
-            background: var(--white);
-            color: var(--text-dark);
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .store-badge:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
-        }
-        
-        /* Projects Section */
-        .projects {
-            background: var(--white);
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: var(--light-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .project-logo {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--white);
-        }
-        
-        .project-logo.green {
-            background: var(--gradient-green);
-        }
-        
-        .project-logo.purple {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .project-logo.orange {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-        }
-        
-        .project-logo.red {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-        }
-        
-        .project-info {
-            padding: 2rem;
-        }
-        
-        .project-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-        
-        .project-info p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .project-note {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            background: rgba(37, 99, 235, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
-        
-        .platform-badge {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .platform-badge.web {
-            background: var(--secondary-color);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark-bg);
-            color: var(--white);
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        footer p {
-            opacity: 0.8;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .hero-features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        
-        /* Schema.org Structured Data */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="/" class="logo">📱 Знает Приложения</a>
-            <ul class="nav-links">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#advantages">Преимущества</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#download">Скачать</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-        <div class="container">
-            <h1>Знает Приложения</h1>
-            <p>Проект создан для тех, кто ценит</p>
-            <div class="hero-features">
-                <div class="hero-feature">🔒 Безопасность</div>
-                <div class="hero-feature">✅ Надёжность</div>
-                <div class="hero-feature">🎨 Стиль</div>
-            </div>
-            <p style="max-width: 800px; margin: 0 auto 2rem;">
-                В большинстве приложений и сервисов от «Знает Приложения» отсутствует реклама.<br>
-                В Заметке отсутствуют облачные функции хранения данных — всё остаётся только на вашем смартфоне.<br>
-                В Киоске надёжная регистрация без сбора данных, если они не требуются для функционала.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Приложения и сервисы</a>
-                <a href="https://apps.znaetapps.ru" class="btn btn-secondary" target="_blank" rel="noopener">Киоск</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages Section -->
-    <section class="advantages" id="advantages">
-        <div class="container">
-            <h2 class="section-title">Преимущества приложений</h2>
-            <div class="advantages-grid">
-                <article class="advantage-card">
-                    <div class="advantage-icon">🔐</div>
-                    <h3>Безопасность</h3>
-                    <p>В основном наши приложения работают без интернета, а если оснащены интернет-функциями, то они не собирают данные без причины</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">😊</div>
-                    <h3>Удобство</h3>
-                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться в приложении</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">⚡</div>
-                    <h3>Многофункциональность</h3>
-                    <p>Каждое приложение обладает полезным набором функций</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">💰</div>
-                    <h3>Стоимость</h3>
-                    <p>Все приложения полностью бесплатные, но в будущем могут появиться платные по низкой стоимости в магазинах приложений</p>
-                </article>
-            </div>
-
-            <h2 class="advantage-subtitle">Преимущества онлайн-сервисов</h2>
-            <div class="advantages-grid">
-                <article class="advantage-card">
-                    <div class="advantage-icon">🛡️</div>
-                    <h3>Безопасность</h3>
-                    <p>Безопасная регистрация с минимальным набором данных, где это требуется</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">🎯</div>
-                    <h3>Удобство</h3>
-                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться на сайте</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">🚀</div>
-                    <h3>Многофункциональность</h3>
-                    <p>Каждый онлайн-сервис обладает полезным набором функций</p>
-                </article>
-                <article class="advantage-card">
-                    <div class="advantage-icon">🌐</div>
-                    <h3>Доступность</h3>
-                    <p>Сервисы доступны прямо в браузере, что даёт возможность использовать их на любой операционной системе</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section class="download" id="download">
-        <div class="container">
-            <h2 class="section-title">Скачивайте и обновляйте приложения</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.2rem; opacity: 0.9;">
-                В нашем собственном магазине приложений «Киоск», Google Play, RuStore, AppGallery
-            </p>
-            <div class="stores">
-                <a href="https://apps.znaetapps.ru" class="store-badge" target="_blank" rel="noopener">🏪 Киоск</a>
-                <a href="#" class="store-badge">▶️ Google Play</a>
-                <a href="#" class="store-badge">📦 RuStore</a>
-                <a href="#" class="store-badge">🎨 AppGallery</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Наши проекты</h2>
-            <div class="projects-grid">
-                <!-- Заметка -->
-                <article class="project-card">
-                    <div class="project-logo">📝</div>
-                    <div class="project-info">
-                        <h3>Заметка</h3>
-                        <p>Заметки, календарь событий</p>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                        </div>
-                        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Страница проекта</a>
-                    </div>
-                </article>
-
-                <!-- Ключ -->
-                <article class="project-card">
-                    <div class="project-logo green">🔑</div>
-                    <div class="project-info">
-                        <h3>Ключ</h3>
-                        <p>Ключи и пароли<br>Генератор, менеджер паролей и 2FA*</p>
-                        <div class="project-note">
-                            *2FA — метод двухфакторной аутентификации, при котором пользователь генерирует одноразовый код на основе текущего времени в дополнение к обычному паролю
-                        </div>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                        </div>
-                        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Страница проекта</a>
-                    </div>
-                </article>
-
-                <!-- Штрих Взор -->
-                <article class="project-card">
-                    <div class="project-logo purple">📷</div>
-                    <div class="project-info">
-                        <h3>Штрих Взор</h3>
-                        <p>Сканер* и генератор QR и штрих-кодов</p>
-                        <div class="project-note">
-                            *Только в Android-версии
-                        </div>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                            <span class="platform-badge web">Веб (ПК/Mac)</span>
-                            <span class="platform-badge web">Веб (генератор)</span>
-                        </div>
-                        <a href="https://magiccodes.ru" class="btn btn-primary" style="width: 100%; text-align: center;" target="_blank" rel="noopener">Официальный сайт</a>
-                    </div>
-                </article>
-
-                <!-- Сёрфер Браузер -->
-                <article class="project-card">
-                    <div class="project-logo orange">🌊</div>
-                    <div class="project-info">
-                        <h3>Сёрфер Браузер</h3>
-                        <p>Браузер для смартфонов с операционной системой Android</p>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                        </div>
-                        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Страница проекта</a>
-                    </div>
-                </article>
-
-                <!-- ЯБЛОГЕР -->
-                <article class="project-card">
-                    <div class="project-logo red">🍎</div>
-                    <div class="project-info">
-                        <h3>ЯБЛОГЕР</h3>
-                        <p>Платформа для блога</p>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                            <span class="platform-badge web">Веб (ПК/Mac)</span>
-                        </div>
-                        <a href="https://about.yablogerapp.ru" class="btn btn-primary" style="width: 100%; text-align: center;" target="_blank" rel="noopener">Официальный сайт</a>
-                    </div>
-                </article>
-
-                <!-- Вспышка Игр -->
-                <article class="project-card">
-                    <div class="project-logo">🎮</div>
-                    <div class="project-info">
-                        <h3>Вспышка Игр</h3>
-                        <p>Игровая платформа с мини-играми</p>
-                        <div>
-                            <span class="platform-badge">Android</span>
-                            <span class="platform-badge web">Веб (ПК/Mac)</span>
-                        </div>
-                        <a href="https://games.znaetapps.ru" class="btn btn-primary" style="width: 100%; text-align: center;" target="_blank" rel="noopener">Официальный сайт</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Знает Приложения. Все права защищены.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
-                Безопасные и надёжные приложения для вашей повседневной жизни
-            </p>
-        </div>
-    </footer>
-
-    <!-- Schema.org Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Знает Приложения",
-        "description": "Безопасные мобильные приложения без рекламы: Заметка, Ключ, Штрих Взор, Сёрфер Браузер",
-        "url": "https://znaetapps.ru",
-        "applicationCategory": "Utilities",
-        "operatingSystem": "Android",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "RUB"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "1000"
-        },
-        "featureList": "Безопасность, Отсутствие рекламы, Оффлайн работа, Менеджер паролей, 2FA, QR сканер",
-        "screenshot": "https://znaetapps.ru/screenshot.png"
-    }
-    </script>
-    
+    <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -665,14 +27,1264 @@
         "name": "Знает Приложения",
         "url": "https://znaetapps.ru",
         "logo": "https://znaetapps.ru/logo.png",
-        "description": "Разработчик безопасных мобильных приложений без рекламы",
-        "sameAs": [
-            "https://apps.znaetapps.ru",
-            "https://magiccodes.ru",
-            "https://about.yablogerapp.ru",
-            "https://games.znaetapps.ru"
-        ]
+        "description": "Безопасные и надёжные приложения для Android без рекламы и сбора данных",
+        "founder": {
+            "@type": "Person",
+            "name": "ИП Капульцевич Максим Игоревич"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support"
+        }
     }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8d9;
+            --card-hover: rgba(102, 126, 234, 0.15);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(102, 126, 234, 0.6);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 100px 20px;
+        }
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: var(--neon-glow);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+            }
+            to {
+                filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.8));
+            }
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: var(--neon-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.7);
+        }
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: var(--card-hover);
+            border-color: #667eea;
+            transform: translateY(-3px);
+        }
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .feature-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: var(--card-hover);
+            border-color: #667eea;
+            box-shadow: var(--neon-glow);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        /* Projects Section */
+        .projects {
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .projects-intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .project-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 40px 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: var(--card-hover);
+            border-color: #667eea;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+        .project-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: var(--accent-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: var(--neon-glow);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover .project-logo {
+            transform: rotate(360deg) scale(1.1);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .project-note {
+            font-size: 0.85rem;
+            color: #764ba2;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 0 30px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-section h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        .legal-info {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated particles background -->
+    <div class="particles" id="particles"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Знает Приложения</h1>
+                <p>Проект «Знает Приложения» создан для тех, кто ценит<br>
+                <strong>Безопасность и надёжность</strong></p>
+                
+                <p style="font-size: 1.1rem; margin-top: 30px;">
+                    В большинстве приложений и сервисов от «Знает Приложения» отсутствует реклама.<br>
+                    В Заметке отсутствуют облачные функции хранения данных, что делает хранение заметок безопаснее, ведь всё остаётся только на вашем смартфоне. 
+                    А в Киоске надёжная регистрация без сбора данных, если они не требуются для конкретного функционала.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Приложения и сервисы</a>
+                    <a href="https://apps.znaetapps.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Киоск</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title fade-in">Преимущества наших продуктов</h2>
+            
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #667eea;" class="fade-in">Приложения</h3>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Безопасность</h3>
+                    <p>В основном наши приложения работают без интернета, а если оснащены интернет-функциями, то они не собирают данные без причины</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">✨</span>
+                    <h3>Удобство</h3>
+                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться в приложении</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Многофункциональность</h3>
+                    <p>Каждое приложение обладает полезным набором функций</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">💰</span>
+                    <h3>Стоимость</h3>
+                    <p>Все приложения полностью бесплатные, но в будущем могут появиться платные по низкой стоимости в магазинах приложений</p>
+                </div>
+            </div>
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #764ba2;" class="fade-in">Онлайн-сервисы</h3>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>Безопасность</h3>
+                    <p>Безопасная регистрация с минимальным набором данных, где это требуется</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Удобство</h3>
+                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться на сайте</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Многофункциональность</h3>
+                    <p>Каждый онлайн-сервис обладает полезным набором функций</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🌐</span>
+                    <h3>Доступность</h3>
+                    <p>Сервисы доступны прямо в браузере, что даёт возможность использовать их на любой операционной системе</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Наши проекты</h2>
+            
+            <p class="projects-intro fade-in">
+                Скачивайте и обновляйте приложения от «Знает Приложения» в нашем собственном магазине приложений «Киоск», Google Play, RuStore, AppGallery
+            </p>
+            <div class="projects-grid">
+                <!-- Заметка -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">📝</div>
+                    <h3>Заметка</h3>
+                    <p>Заметки, календарь событий</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#note-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- Ключ -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🔑</div>
+                    <h3>Ключ</h3>
+                    <p>Генератор, менеджер паролей и 2FA*</p>
+                    <p class="project-note">*2FA — метод двухфакторной аутентификации, при котором пользователь генерирует одноразовый код на основе текущего времени в дополнение к обычному паролю</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#key-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- Штрих Взор -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">📱</div>
+                    <h3>Штрих Взор</h3>
+                    <p>Сканер* и генератор QR и штрих-кодов</p>
+                    <p class="project-note">*Сканер только в Android-версии</p>
+                    <p class="project-note">Веб-версия доступна для ПК и Apple</p>
+                    <a href="https://magiccodes.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+                <!-- Сёрфер Браузер -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🌊</div>
+                    <h3>Сёрфер Браузер</h3>
+                    <p>Браузер для смартфонов с операционной системой Android</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#surfer-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- ЯБЛОГЕР -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🍎</div>
+                    <h3>ЯБЛОГЕР</h3>
+                    <p>Платформа для блога</p>
+                    <p class="project-note">Веб-версия доступна для всех платформ</p>
+                    <a href="https://about.yablogerapp.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+                <!-- Вспышка Игр -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🎮</div>
+                    <h3>Вспышка Игр</h3>
+                    <p>Игровая платформа с мини-играми</p>
+                    <p class="project-note">Веб-версия доступна для всех платформ</p>
+                    <a href="https://games.znaetapps.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>О компании</h4>
+                    <p>ИП Капульцевич Максим Игоревич</p>
+                    <p>ИНН: 720414818949</p>
+                    <p>ОГРНИП: 326723200016493</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Персональные данные</h4>
+                    <p class="legal-info">Зарегистрирован в реестре операторов персональных данных с присвоенным регистрационным номером № 72-26-055539 от 12.02.2026 г.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Продукты</h4>
+                    <p><a href="#projects">Приложения</a></p>
+                    <p><a href="https://apps.znaetapps.ru" target="_blank" rel="noopener noreferrer">Киоск</a></p>
+                    <p><a href="https://games.znaetapps.ru" target="_blank" rel="noopener noreferrer">Вспышка Игр</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Все права защищены, ИП Капульцевич Максим Игоревич</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        // Scroll animation observer
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            setupScrollAnimations();
+        });
+    </script>
+</body>
+</html>
+HTMLEOF
+$ cat > /workspace/index.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Знает Приложения — Безопасные и надёжные приложения для вашего смартфона</title>
+    <meta name="description" content="Проект «Знает Приложения» — безопасные, надёжные и бесплатные приложения для Android. Заметки, менеджер паролей, QR-сканер, браузер и игровая платформа без рекламы и сбора данных.">
+    <meta name="keywords" content="Знает Приложения, безопасные приложения, Android приложения, заметки, менеджер паролей, QR сканер, браузер, игровая платформа, без рекламы, приватность">
+    <meta name="author" content="ИП Капульцевич Максим Игоревич">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Знает Приложения — Безопасность и надёжность в каждом приложении">
+    <meta property="og:description" content="Скачивайте безопасные приложения без рекламы. Заметки, пароли, QR-коды, браузер и игры — всё бесплатно и без сбора данных.">
+    <meta property="og:url" content="https://znaetapps.ru">
+    <meta property="og:site_name" content="Знает Приложения">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Знает Приложения",
+        "url": "https://znaetapps.ru",
+        "logo": "https://znaetapps.ru/logo.png",
+        "description": "Безопасные и надёжные приложения для Android без рекламы и сбора данных",
+        "founder": {
+            "@type": "Person",
+            "name": "ИП Капульцевич Максим Игоревич"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%);
+            --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8d9;
+            --card-hover: rgba(102, 126, 234, 0.15);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(102, 126, 234, 0.6);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 100px 20px;
+        }
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: var(--neon-glow);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+            }
+            to {
+                filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.8));
+            }
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: var(--neon-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.7);
+        }
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: white;
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: var(--card-hover);
+            border-color: #667eea;
+            transform: translateY(-3px);
+        }
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .feature-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: var(--card-hover);
+            border-color: #667eea;
+            box-shadow: var(--neon-glow);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        /* Projects Section */
+        .projects {
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .projects-intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .project-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 40px 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: var(--card-hover);
+            border-color: #667eea;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+        .project-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: var(--accent-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: var(--neon-glow);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover .project-logo {
+            transform: rotate(360deg) scale(1.1);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .project-note {
+            font-size: 0.85rem;
+            color: #764ba2;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid var(--glass-border);
+            padding: 60px 0 30px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-section h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        .legal-info {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated particles background -->
+    <div class="particles" id="particles"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Знает Приложения</h1>
+                <p>Проект «Знает Приложения» создан для тех, кто ценит<br>
+                <strong>Безопасность и надёжность</strong></p>
+                
+                <p style="font-size: 1.1rem; margin-top: 30px;">
+                    В большинстве приложений и сервисов от «Знает Приложения» отсутствует реклама.<br>
+                    В Заметке отсутствуют облачные функции хранения данных, что делает хранение заметок безопаснее, ведь всё остаётся только на вашем смартфоне. 
+                    А в Киоске надёжная регистрация без сбора данных, если они не требуются для конкретного функционала.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Приложения и сервисы</a>
+                    <a href="https://apps.znaetapps.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Киоск</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title fade-in">Преимущества наших продуктов</h2>
+            
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #667eea;" class="fade-in">Приложения</h3>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Безопасность</h3>
+                    <p>В основном наши приложения работают без интернета, а если оснащены интернет-функциями, то они не собирают данные без причины</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">✨</span>
+                    <h3>Удобство</h3>
+                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться в приложении</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Многофункциональность</h3>
+                    <p>Каждое приложение обладает полезным набором функций</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">💰</span>
+                    <h3>Стоимость</h3>
+                    <p>Все приложения полностью бесплатные, но в будущем могут появиться платные по низкой стоимости в магазинах приложений</p>
+                </div>
+            </div>
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #764ba2;" class="fade-in">Онлайн-сервисы</h3>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>Безопасность</h3>
+                    <p>Безопасная регистрация с минимальным набором данных, где это требуется</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Удобство</h3>
+                    <p>Удобный интерфейс, который позволяет с лёгкостью ориентироваться на сайте</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Многофункциональность</h3>
+                    <p>Каждый онлайн-сервис обладает полезным набором функций</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🌐</span>
+                    <h3>Доступность</h3>
+                    <p>Сервисы доступны прямо в браузере, что даёт возможность использовать их на любой операционной системе</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Наши проекты</h2>
+            
+            <p class="projects-intro fade-in">
+                Скачивайте и обновляйте приложения от «Знает Приложения» в нашем собственном магазине приложений «Киоск», Google Play, RuStore, AppGallery
+            </p>
+            <div class="projects-grid">
+                <!-- Заметка -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">📝</div>
+                    <h3>Заметка</h3>
+                    <p>Заметки, календарь событий</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#note-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- Ключ -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🔑</div>
+                    <h3>Ключ</h3>
+                    <p>Генератор, менеджер паролей и 2FA*</p>
+                    <p class="project-note">*2FA — метод двухфакторной аутентификации, при котором пользователь генерирует одноразовый код на основе текущего времени в дополнение к обычному паролю</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#key-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- Штрих Взор -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">📱</div>
+                    <h3>Штрих Взор</h3>
+                    <p>Сканер* и генератор QR и штрих-кодов</p>
+                    <p class="project-note">*Сканер только в Android-версии</p>
+                    <p class="project-note">Веб-версия доступна для ПК и Apple</p>
+                    <a href="https://magiccodes.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+                <!-- Сёрфер Браузер -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🌊</div>
+                    <h3>Сёрфер Браузер</h3>
+                    <p>Браузер для смартфонов с операционной системой Android</p>
+                    <p class="project-note">Только для Android</p>
+                    <a href="#surfer-project" class="btn btn-primary">Страница проекта</a>
+                </div>
+                <!-- ЯБЛОГЕР -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🍎</div>
+                    <h3>ЯБЛОГЕР</h3>
+                    <p>Платформа для блога</p>
+                    <p class="project-note">Веб-версия доступна для всех платформ</p>
+                    <a href="https://about.yablogerapp.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+                <!-- Вспышка Игр -->
+                <div class="project-card fade-in">
+                    <div class="project-logo">🎮</div>
+                    <h3>Вспышка Игр</h3>
+                    <p>Игровая платформа с мини-играми</p>
+                    <p class="project-note">Веб-версия доступна для всех платформ</p>
+                    <a href="https://games.znaetapps.ru" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>О компании</h4>
+                    <p>ИП Капульцевич Максим Игоревич</p>
+                    <p>ИНН: 720414818949</p>
+                    <p>ОГРНИП: 326723200016493</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Персональные данные</h4>
+                    <p class="legal-info">Зарегистрирован в реестре операторов персональных данных с присвоенным регистрационным номером № 72-26-055539 от 12.02.2026 г.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Продукты</h4>
+                    <p><a href="#projects">Приложения</a></p>
+                    <p><a href="https://apps.znaetapps.ru" target="_blank" rel="noopener noreferrer">Киоск</a></p>
+                    <p><a href="https://games.znaetapps.ru" target="_blank" rel="noopener noreferrer">Вспышка Игр</a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Все права защищены, ИП Капульцевич Максим Игоревич</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        // Scroll animation observer
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            setupScrollAnimations();
+        });
     </script>
 </body>
 </html>
